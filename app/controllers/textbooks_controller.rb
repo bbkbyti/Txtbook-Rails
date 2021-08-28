@@ -1,5 +1,6 @@
 class TextbooksController < ApplicationController
   before_action :set_textbook, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /textbooks
   def index
@@ -10,15 +11,16 @@ class TextbooksController < ApplicationController
 
   # GET /textbooks/1
   def show
-    render json: @textbook
+    render json: @textbook, include: :categories
   end
 
   # POST /textbooks
   def create
     @textbook = Textbook.new(textbook_params)
+    @textbook.user = @current_user
 
     if @textbook.save
-      render json: @textbook, status: :created, location: @textbook
+      render json: @textbook, status: :created
     else
       render json: @textbook.errors, status: :unprocessable_entity
     end
@@ -46,6 +48,6 @@ class TextbooksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def textbook_params
-      params.require(:textbook).permit(:title, :author, :edition, :ISBN, :img_url, :price, :user_id, :category_id, :other)
+      params.require(:textbook).permit(:title, :author, :edition, :ISBN, :img_url, :price, :category_id, :other)
     end
 end
