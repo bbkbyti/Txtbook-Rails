@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 import Textbook from "../components/Textbook"
 import Search from '../components/Search'
 import Sort from '../components/Sort'
-import Layout from '../layouts/Layout'
 import { AZ, ZA, lowestFirst, highestFirst } from '../utils/sort'
 
 import { getAllTextbooks } from '../services/textbook'
@@ -13,6 +12,7 @@ const TextbookList = (props) => {
   const [searchResult, setSearchResult] = useState([])
   const [applySort, setApplySort] = useState(false)
   const [sortType, setSortType] = useState('name-ascending')
+  
   useEffect(() => {
     const fetchTextbooks = async () => {
       const allTextbooks = await getAllTextbooks()
@@ -55,7 +55,7 @@ const TextbookList = (props) => {
   } 
   const handleSubmit = (event) => event.preventDefault()
   return (
-    <Layout user={props.user}>
+    <div>
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <Sort onSubmit={handleSubmit} handleSort={handleSort} />
       <div className=''>
@@ -71,7 +71,7 @@ const TextbookList = (props) => {
           )
         })}
       </div>
-    </Layout>
+    </div>
   )
 }
 export default TextbookList
