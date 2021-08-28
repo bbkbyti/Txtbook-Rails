@@ -4,7 +4,7 @@ import { getAllCategories } from '../services/categories';
 export default function Categories(props) {
     
     const [categories, setCategories] = useState([]);
-
+    
     useEffect(() => {
         const fetchCategories = async () => {
             const categoriesList = await getAllCategories();
@@ -12,6 +12,7 @@ export default function Categories(props) {
         }
         fetchCategories();
     }, [])
+    
     return (
         <div>
             <h2>categories</h2>

@@ -24,10 +24,10 @@ const BooksDetail = (props) => {
     }
 
     const handleDelete = async () => {
-        const resp = await deleteTextbook(id);
-        console.log(resp);
-        history.push("/textbooks");
-    };
+        const resp = await deleteTextbook(id)
+        console.log(resp)
+        history.push('/textbooks')
+    }
     console.log(textbook);
     return (
         <>

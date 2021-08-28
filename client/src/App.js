@@ -11,6 +11,7 @@ import TextbookDetail from './screens/TextbookDetail'
 import TextbookCreate from './screens/TextbookCreate';
 import TextbookEdit from './screens/TextbookEdit';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
+import Home from './screens/Home';
 
 
 function App() {
@@ -69,6 +70,9 @@ function App() {
         </Route>
         <Route exact path="/textbooks">
           <TextbooksList />
+        </Route>
+          <Route exact path="/">
+          <Home/>
         </Route>
         </Switch>
       </Layout>

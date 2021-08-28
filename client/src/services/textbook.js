@@ -23,6 +23,6 @@ export const putTextbook = async (id, textbookData) => {
 
 
 export const deleteTextbook = async (id) => {
-    const resp = await api.delete(`(/textbooks/${id})`);
-    return resp;
-};
+    const resp = await api.delete(`/textbooks/${id}`);
+    return resp
+}
