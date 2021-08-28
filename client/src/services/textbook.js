@@ -17,9 +17,10 @@ export const postTextbook = async (textbookData) => {
 
 
 export const putTextbook = async (id, textbookData) => {
-    const resp = await api.put(`(/textbooks/${id})`, { textbook: textbookData });
-    return resp.data;
+	const resp = await api.put(`/textbooks/${id}`, { textbook: textbookData });
+	return resp.data;
 };
+
 
 export const deleteTextbook = async (id) => {
     const resp = await api.delete(`(/textbooks/${id})`);

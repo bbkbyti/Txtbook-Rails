@@ -8,7 +8,10 @@ import Register from './screens/Register';
 import Categories from './screens/Categories';
 import TextbooksList from './screens/TextbooksList'
 import TextbookDetail from './screens/TextbookDetail'
+import TextbookCreate from './screens/TextbookCreate';
+import TextbookEdit from './screens/TextbookEdit';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
+
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -57,6 +60,12 @@ function App() {
         </Route>
           <Route exact path="/categories">
           <Categories/>
+        </Route>
+        <Route exact path="/textbooks/:id/edit">
+          <TextbookEdit />
+        </Route>
+        <Route exact path="/add/textbooks">
+          <TextbookCreate />
         </Route>
         <Route exact path="/textbooks">
           <TextbooksList />

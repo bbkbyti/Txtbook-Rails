@@ -16,6 +16,8 @@ export default function Layout(props) {
                 <Link to='/register'>Register</Link>
                 <Link to='/categories'>Categories</Link>
                 <Link to='/textbooks'>Textbooks</Link>
+                <Link to='/textbooks/new'>Add</Link>
+                
                 </div>
             )}
             <hr />
@@ -23,6 +25,8 @@ export default function Layout(props) {
                 <div>
                     <Link to='/textbooks'>Textbooks</Link>
                     <Link to='/categories'>Categories</Link>
+                    <Link to='/add/textbooks'>Add</Link>
+
                 </div>
             )}
             {props.children}
