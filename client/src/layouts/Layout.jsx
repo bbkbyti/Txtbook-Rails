@@ -1,4 +1,5 @@
 
+import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
 export default function Layout(props) {
@@ -7,6 +8,9 @@ export default function Layout(props) {
         <div>
             <Navbar currentUser={currentUser} handleLogout={handleLogout} />
             <div className="mt-20 text-black">{props.children}</div>
+            <div>
+            <Footer />
+            </div>
         </div>
         
                     
