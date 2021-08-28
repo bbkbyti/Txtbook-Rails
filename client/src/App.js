@@ -6,6 +6,8 @@ import Layout from './layouts/Layout';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import Categories from './screens/Categories';
+import TextbooksList from './screens/TextbooksList'
+import TextbookDetail from './screens/TextbookDetail'
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 
 function App() {
@@ -50,8 +52,14 @@ function App() {
           <Route path='/register'>
             <Register handleRegister={handleRegister}/>
           </Route>
+          <Route exact path="/textbooks/:id">
+          <TextbookDetail />
+        </Route>
           <Route exact path="/categories">
           <Categories/>
+        </Route>
+        <Route exact path="/textbooks">
+          <TextbooksList />
         </Route>
         </Switch>
       </Layout>
