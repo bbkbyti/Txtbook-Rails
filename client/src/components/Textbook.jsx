@@ -2,14 +2,16 @@ import { Link } from "react-router-dom";
 const Textbook = (props) => {
     
     return (
-        <>
-            <Link to={`/textbooks/${props.id}`}>
+        <div  className='min-h-screen grid grid-cols-3'>
+            
+                <div>
                 <h2>{props.title}</h2>
+                <Link to={`/textbooks/${props.id}`}>
                 <img src={props.img_url} alt={props.title} />
-                <p>{props.ISBN}</p>
-                <div>{`$${props.price}`}</div>
-            </Link>
-        </>
+                </Link>
+                </div>
+            
+        </div>
     );
 };
 export default Textbook;

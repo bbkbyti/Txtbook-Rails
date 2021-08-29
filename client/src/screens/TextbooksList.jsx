@@ -58,14 +58,13 @@ const TextbookList = (props) => {
     <div>
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <Sort onSubmit={handleSubmit} handleSort={handleSort} />
-      <div className=''>
+      <div>
         {searchResult.map((textbook, index) => {
           return (
             <Textbook
               id={textbook.id}
               title={textbook.title}
               img_url={textbook.img_url}
-              price={textbook.price}
               key={index}
             />
           )
