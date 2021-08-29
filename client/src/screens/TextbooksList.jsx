@@ -1,18 +1,16 @@
 import { useState, useEffect } from 'react'
-
-import Textbook from "../components/Textbook"
 import Search from '../components/Search'
 import Sort from '../components/Sort'
 import { AZ, ZA, lowestFirst, highestFirst } from '../utils/sort'
-
 import { getAllTextbooks } from '../services/textbook'
+import { Link } from 'react-router-dom'
 
 const TextbookList = (props) => {
   const [textbooks, setTextbooks] = useState([])
   const [searchResult, setSearchResult] = useState([])
   const [applySort, setApplySort] = useState(false)
   const [sortType, setSortType] = useState('name-ascending')
-  
+
   useEffect(() => {
     const fetchTextbooks = async () => {
       const allTextbooks = await getAllTextbooks()
@@ -52,21 +50,23 @@ const TextbookList = (props) => {
     )
     setSearchResult(results)
     setApplySort(true)
-  } 
+  }
   const handleSubmit = (event) => event.preventDefault()
   return (
     <div>
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <Sort onSubmit={handleSubmit} handleSort={handleSort} />
-      <div>
+      <div className='min-h-screen grid grid-cols-3'>
         {searchResult.map((textbook, index) => {
+          // console.log(textbook);
           return (
-            <Textbook
-              id={textbook.id}
-              title={textbook.title}
-              img_url={textbook.img_url}
-              key={index}
-            />
+            <div className='' key={index}>
+             <p className='text-3xl'>{textbook.title}</p>
+              <Link to={`/textbooks/${textbook.id}`}>
+                <img className='w-5/12' src={textbook.img_url} alt={textbook.title} />
+              </Link>
+            </div>
+
           )
         })}
       </div>

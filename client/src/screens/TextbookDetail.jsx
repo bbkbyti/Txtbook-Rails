@@ -28,30 +28,33 @@ const BooksDetail = (props) => {
         console.log(resp)
         history.push('/textbooks')
     }
-    console.log(textbook);
     return (
         <>
             <div>
-                <div>{textbook.title}</div>
+                <div>{textbook?.title}</div>
                 <img
-                    src={textbook.img_url}
-                    alt={textbook.title}
+                    src={textbook?.img_url}
+                    alt={textbook?.title}
                 />
                 <div>
                     <div>
-                        <div>Author: {textbook.author}</div>
-                        <div>Edition: {textbook.edition}</div>
-                        <div>ISBN: {textbook.ISBN}</div>
-                        <div>Category: {textbook.category.name}</div>
-                        <div>Price: ${textbook.price}</div>
+                        <div>Author: {textbook?.author}</div>
+                        <div>Edition: {textbook?.edition}</div>
+                        <div>ISBN: {textbook?.ISBN}</div>
+                        <div>Category: {textbook?.category.name}</div>
+                        <div>Price: ${textbook?.price}</div>
                     </div>
                     <div>
-                        <Link to={`/textbooks/${textbook.id}/edit`}>
-                            <button>Edit</button>
-                        </Link>
-                        <button onClick={handleDelete}>
-                            Delete
-                        </button>
+                        {currentUser?.id === textbook.user_id && (
+                            <div>
+                                <Link to={`/textbooks/${textbook.id}/edit`}>
+                                    <button>Edit</button>
+                                </Link>
+                                <button onClick={handleDelete}>
+                                    Delete
+                                </button>
+                            </div>)}
+
                     </div>
                 </div>
             </div>

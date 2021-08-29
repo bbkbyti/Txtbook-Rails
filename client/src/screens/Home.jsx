@@ -23,7 +23,7 @@ export default function Home() {
           <h2 className='px-8 py-10 text-blue-800 font-bold italic text-4xl leading-relaxed'>
             Welcome to Textbook Rails<br />Buy and Sell College Textbooks Online </h2>
         </div>
-        <img className=' w-9/12 ' src='https://www.pngkit.com/png/detail/126-1268278_faqs-for-students-college-student-students-icon.png' alt='students' />
+        <img className='w-9/12' src='https://www.pngkit.com/png/detail/126-1268278_faqs-for-students-college-student-students-icon.png' alt='students' />
       </div>
       <div>
         <div className='flex flex-col justify-evenly mb-4 mt-3'>
