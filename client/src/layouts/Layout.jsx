@@ -7,7 +7,7 @@ export default function Layout(props) {
     return (
         <div>
             <Navbar currentUser={currentUser} handleLogout={handleLogout} />
-            <div className="mt-20 text-black">{props.children}</div>
+            <div className="text-black">{props.children}</div>
             <div>
             <Footer />
             </div>

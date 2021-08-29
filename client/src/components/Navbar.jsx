@@ -8,21 +8,23 @@ export default function Navbar(props) {
             <header className="text-white">
 
                 {currentUser ? (
-                    <div className="bg-blue-500">
-                        <h1 >Textbook Rails</h1>
-                        <h3>{currentUser.username}</h3>
-                        <Link className="m-3" to='/textbooks'>Textbooks</Link>
-                        <Link className="m-3" to='/categories'>Categories</Link>
-                        <Link className="m-3" to='/add/textbooks'>Add your textbook</Link>
-                        <button onClick={handleLogout}>Logout</button>
+                    <div className="py-8 bg-blue-900 flex justify-evenly font-serif text-xl">
+                        <Link className='text-4xl italic' to='/'>Textbook Rails</Link>
+                        <Link className="" to='/textbooks'>Textbooks</Link>
+                        <Link className="" to='/categories'>Categories</Link>
+                        <Link className="" to='/add/textbooks'>Add Textbook</Link>
+                        <button className='pb-3' onClick={handleLogout}>LogOut</button>
+                        <h3 className='text-2xl italic'>Hi {currentUser.username} !</h3>
+                        
                     </div>
                 ) : (
-                    <div className="bg-yellow-300">
-                        <h1 >Textbook Rails</h1>
-                        <Link to='/login'>Login</Link>
-                        <Link to='/register'>Register</Link>
+                    <div className="py-8 bg-blue-900 flex justify-evenly font-serif text-xl">
+                        <Link className='text-4xl italic' to='/'>Textbook Rails</Link>
                         <Link to='/categories'>Categories</Link>
                         <Link to='/textbooks'>Textbooks</Link>
+                        <Link to='/login'>Login</Link>
+                        <Link to='/register'>Register</Link>
+                        
 
 
                     </div>

@@ -6,12 +6,14 @@ import Layout from './layouts/Layout';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import Categories from './screens/Categories';
+import CategoriesTextbooks from './screens/CategoriesTextbooks';
 import TextbooksList from './screens/TextbooksList'
 import TextbookDetail from './screens/TextbookDetail'
 import TextbookCreate from './screens/TextbookCreate';
 import TextbookEdit from './screens/TextbookEdit';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import Home from './screens/Home';
+
 
 
 function App() {
@@ -59,8 +61,11 @@ function App() {
           <Route exact path="/textbooks/:id">
           <TextbookDetail />
         </Route>
-          <Route exact path="/categories">
-          <Categories/>
+          <Route exact path="/categories-textbooks">
+         <CategoriesTextbooks />
+        </Route>
+        <Route exact path='/categories'>
+        <Categories />
         </Route>
         <Route exact path="/textbooks/:id/edit">
           <TextbookEdit />

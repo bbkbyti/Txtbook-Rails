@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import { getAllCategories } from '../services/categories';
-export default function Categories(props) {
+export default function CategoriesTextbooks(props) {
 
     const [categories, setCategories] = useState([]);
 
@@ -15,10 +15,15 @@ export default function Categories(props) {
 
     return (
         <div>
-            <h3>Real Categories</h3>
-            {categories.map((obj, index) => (
+            <h3>Categories</h3>
+            {categories
+                && categories.map((obj, index) => (
                     <div key={index}>
-                        {obj.name}
+                        {obj.textbooks.map((textbook) => (
+                            <div key={textbook.id}>
+                                {textbook.title}
+                            </div>
+                        ))}
                     </div>
                 ))}
         </div>
