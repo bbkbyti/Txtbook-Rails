@@ -65,7 +65,6 @@ const TextbookList = (props) => {
               id={textbook.id}
               title={textbook.title}
               img_url={textbook.img_url}
-              price={textbook.price}
               key={index}
             />
           )

@@ -6,8 +6,6 @@ const Textbook = (props) => {
             <Link to={`/textbooks/${props.id}`}>
                 <h2>{props.title}</h2>
                 <img src={props.img_url} alt={props.title} />
-                <p>{props.ISBN}</p>
-                <div>{`$${props.price}`}</div>
             </Link>
         </>
     );
