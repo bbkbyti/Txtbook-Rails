@@ -56,15 +56,18 @@ const TextbookList = (props) => {
     <div>
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <Sort onSubmit={handleSubmit} handleSort={handleSort} />
-      <div className='min-h-screen grid grid-cols-3'>
+      <div className='min-h-screen grid grid-cols-3 '>
         {searchResult.map((textbook, index) => {
           // console.log(textbook);
           return (
-            <div className='' key={index}>
-             <p className='text-3xl'>{textbook.title}</p>
-              <Link to={`/textbooks/${textbook.id}`}>
-                <img className='w-5/12' src={textbook.img_url} alt={textbook.title} />
+            <div className='flex flex-col justify-center items-center'  key={index}>
+             <p className='text-xl'>{textbook.title}</p>
+             <div className='flex flex-col justify-center'>
+             <Link  to={`/textbooks/${textbook.id}`}>
+                <img className='w-40 h-full object-cover ' src={textbook.img_url} alt={textbook.title} />
               </Link>
+             </div>
+             
             </div>
 
           )

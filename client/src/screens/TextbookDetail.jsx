@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getOneTextbook, deleteTextbook } from '../services/textbook';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useHistory, Link } from 'react-router-dom';
 
 
 export default function TextbookDetail(props) {
@@ -46,7 +46,11 @@ export default function TextbookDetail(props) {
                         <div>{textbookDetail?.price}</div>
                     </div>
                     <button onClick={handleDelete}>Delete</button>
-                    <button>Edit</button>
+                    <Link to='/textbooks/:id/edit'>
+                    <button>
+                        Edit</button>
+                    </Link>
+                    
                 </div>
             )}
 

@@ -7,6 +7,7 @@ export default function Home() {
   const [categories, setCategories] = useState([]);
   const [textbook, setTextbooks] = useState([])
   useEffect(() => {
+    
     const fetchDropDowns = async () => {
       const categories = await getAllCategories();
 

@@ -17,8 +17,8 @@ export default function Register(props) {
     };
 
     return (
-        <div className='min-h-screen font-serif flex justify-center'>
-            <div  className='mt-16 rounded-2xl py-10 mb-32 bg-gray-300 shadow-2xl px-20'>
+        <div className='min-h-screen font-serif flex justify-center bg-blue-100'>
+            <div  className='mt-16 rounded-2xl py-10 mb-32 bg-white shadow-2xl px-20'>
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();
@@ -68,7 +68,8 @@ export default function Register(props) {
                         <label for='agree'> I agree to the terms and privacy</label>
                     </div>
                     <div>
-                        <button className='bg-green-400 text-white font-bold text-xl mt-8 py-2 px-16 rounded-xl hover:bg-green-500'>Sign Up</button>
+                        <button className='bg-yellow-300 text-blue-900 font-bold text-xl mt-8 py-2 px-16 rounded-xl hover:bg-yellow-400'>
+                            Sign Up</button>
                         </div>
                     </div>
                 </form>

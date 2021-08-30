@@ -11,7 +11,7 @@ class TextbooksController < ApplicationController
 
   # GET /textbooks/1
   def show
-    render json: @textbook, include: :category, status: :ok
+    render json: @textbook, include: :category
   end
 
   # POST /textbooks
