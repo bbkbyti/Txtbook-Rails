@@ -55,10 +55,10 @@ const TextbookList = (props) => {
   } 
   const handleSubmit = (event) => event.preventDefault()
   return (
-    <div>
+    <div className="">
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <Sort onSubmit={handleSubmit} handleSort={handleSort} />
-      <div className=''>
+      <div className='min-h-screen grid grid-cols-3  '>
         {searchResult.map((textbook, index) => {
           return (
             <Textbook
