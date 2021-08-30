@@ -59,7 +59,7 @@ function App() {
             <Register handleRegister={handleRegister}/>
           </Route>
           <Route exact path="/textbooks/:id">
-          <TextbookDetail />
+          <TextbookDetail currentUser={currentUser} />
         </Route>
           <Route exact path="/categories-textbooks">
          <CategoriesTextbooks />

@@ -1,65 +1,47 @@
-import { useState, useEffect } from "react";
-import { getOneTextbook, deleteTextbook } from "../services/textbook";
-import { useParams, Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { getOneTextbook } from '../services/textbook';
+import { useParams } from 'react-router-dom';
 
-const BooksDetail = (props) => {
-    const [textbook, setTextbooks] = useState(null);
-    const [isLoaded, setLoaded] = useState(false);
-    const { currentUser } = props
 
-    const history = useHistory();
+export default function TextbookDetail(props) {
+    const [textbookDetail, setTextbookDetail] = useState(null)
     const { id } = useParams();
+    const { currentUser } = props;
+
     useEffect(() => {
         const fetchTextbook = async () => {
-            const textbook = await getOneTextbook(id);
-            setTextbooks(textbook);
-            setLoaded(true);
-        };
+            const itemDetail = await getOneTextbook(id)
+            setTextbookDetail(itemDetail);
+        }
         fetchTextbook();
-    }, [id]);
+    }, [id])
 
-    if (!isLoaded) {
-        return <h1>Loading...</h1>;
-    }
-
-    const handleDelete = async () => {
-        const resp = await deleteTextbook(id)
-        console.log(resp)
-        history.push('/textbooks')
-    }
     return (
-        <>
-            <div>
-                <div>{textbook?.title}</div>
-                <img
-                    src={textbook?.img_url}
-                    alt={textbook?.title}
-                />
+        <div>
+            {!currentUser ? (
+                <div>
+                    <img src={textbookDetail?.img_url} />
+                    <div>{textbookDetail?.title}</div>
+                    <div>{textbookDetail?.author}</div>
+                    <div>{textbookDetail?.ISBN}</div>
+                    <div>{textbookDetail?.category.name}</div>
+                    <div>{textbookDetail?.price}</div>
+                </div>
+            ) : (
                 <div>
                     <div>
-                        <div>Author: {textbook?.author}</div>
-                        <div>Edition: {textbook?.edition}</div>
-                        <div>ISBN: {textbook?.ISBN}</div>
-                        <div>Category: {textbook?.category.name}</div>
-                        <div>Price: ${textbook?.price}</div>
+                        <img src={textbookDetail?.img_url} />
+                        <div>{textbookDetail?.title}</div>
+                        <div>{textbookDetail?.author}</div>
+                        <div>{textbookDetail?.ISBN}</div>
+                        <div>{textbookDetail?.category.name}</div>
+                        <div>{textbookDetail?.price}</div>
                     </div>
-                    <div>
-                        {currentUser?.id === textbook.user_id && (
-                            <div>
-                                <Link to={`/textbooks/${textbook.id}/edit`}>
-                                    <button>Edit</button>
-                                </Link>
-                                <button onClick={handleDelete}>
-                                    Delete
-                                </button>
-                            </div>)}
-
-                    </div>
+                    <button>Delete</button>
+                    <button>Edit</button>
                 </div>
-            </div>
-        </>
-    );
-};
+            )}
 
-export default BooksDetail;
+        </div>
+    )
+}
