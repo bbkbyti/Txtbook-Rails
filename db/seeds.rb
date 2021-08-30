@@ -151,7 +151,7 @@ puts "#{Category.count} categories created"
     edition: '15',
     ISBN: '0134484142',
     img_url: 'https://images-na.ssl-images-amazon.com/images/I/41OzpSQiuCL._SX411_BO1,204,203,200_.jpg',
-    price: '105', user: @admin, category: @category26
+    price: '105', user: @admin, category: @category17
 )
 @textbook14 = Textbook.create!(
     title: 'Introduction to Psychology: Gateways to Mind and Behavior',
@@ -159,6 +159,6 @@ puts "#{Category.count} categories created"
     edition: '7',
     ISBN: '0134484142',
     img_url: 'https://images-na.ssl-images-amazon.com/images/I/4150k4ZR3kL._SX378_BO1,204,203,200_.jpg',
-    price: '265', user: @admin, category: @category17
+    price: '265', user: @admin, category: @category26
 )
 puts "#{Textbook.count} texbooks created"

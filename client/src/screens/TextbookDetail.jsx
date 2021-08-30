@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
-import { getOneTextbook } from '../services/textbook';
-import { useParams } from 'react-router-dom';
+import { getOneTextbook, deleteTextbook } from '../services/textbook';
+import { useParams, useHistory } from 'react-router-dom';
 
 
 export default function TextbookDetail(props) {
     const [textbookDetail, setTextbookDetail] = useState(null)
     const { id } = useParams();
     const { currentUser } = props;
+    const history = useHistory();
 
     useEffect(() => {
         const fetchTextbook = async () => {
@@ -15,6 +16,13 @@ export default function TextbookDetail(props) {
         }
         fetchTextbook();
     }, [id])
+
+    const handleDelete = async () =>{
+        const resp = await deleteTextbook(id)
+        console.log(resp);
+        history.push('/textbooks')
+
+    }
 
     return (
         <div>
@@ -37,7 +45,7 @@ export default function TextbookDetail(props) {
                         <div>{textbookDetail?.category.name}</div>
                         <div>{textbookDetail?.price}</div>
                     </div>
-                    <button>Delete</button>
+                    <button onClick={handleDelete}>Delete</button>
                     <button>Edit</button>
                 </div>
             )}
