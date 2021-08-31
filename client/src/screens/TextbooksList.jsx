@@ -55,13 +55,13 @@ const TextbookList = (props) => {
   } 
   const handleSubmit = (event) => event.preventDefault()
   return (
-    <div className="bg-blue-100">
-      <div className='flex justify-evenly py-12 bg-yellow-200' >
+    <div className="lg:bg-blue-100">
+      <div className='lg:flex lg:justify-evenly lg:py-12 lg:bg-yellow-200 flex flex-col py-3' >
       <Sort onSubmit={handleSubmit} handleSort={handleSort} />
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       </div>
       
-      <div className='min-h-screen grid grid-cols-3'>
+      <div className='lg:min-h-screen lg:grid lg:grid-cols-3 grid grid-cols-2'>
         {searchResult.map((textbook, index) => {
           return (
             <Textbook
