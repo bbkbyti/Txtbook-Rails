@@ -33,8 +33,8 @@ export default function Home(props) {
                     <Link to='/add/textbooks' className='lg:text-4xl lg:text-blue-900 lg:font-bold lg:bg-gray-300 lg:py-4 lg:mx-32 lg:transition lg:duration-500 lg:ease-in-out lg:transform lg:hover:-translate-y-1 lg:hover:scale-110 bg-gray-300 text-blue-900 font-bold px-3 py-2'>Sell Textbooks</Link>
                 </div>
                 <div className='lg:flex lg:justify-center flex justify-center py-5'>
-                    <Link to='/login' className='lg:bg-green-400 lg:text-2xl lg:text-white lg:font-bold lg:px-9 lg:py-3 lg:mx-4  lg:transition lg:duration-500 lg:ease-in-out lg:transform lg:hover:-translate-y-1 lg:hover:scale-110 bg-green-500 px-3 mx-2'>LogIn</Link>
-                    <Link to='/register' className='lg:bg-yellow-300 lg:text-2xl lg:text-blue-900 lg:font-bold lg:px-6 lg:py-3  lg:transition lg:duration-500 lg:ease-in-out lg:transform lg:hover:-translate-y-1 lg:hover:scale-110 bg-yellow-400 px-2'>Register</Link>
+                    <Link to='/login' className='lg:bg-green-400 lg:text-2xl lg:text-white lg:font-bold lg:px-9 lg:py-3 lg:mx-4  lg:transition lg:duration-500 lg:ease-in-out lg:transform lg:hover:-translate-y-1 lg:hover:scale-110 bg-green-500 text-white px-3 font-bold mx-2 py-2'>LogIn</Link>
+                    <Link to='/register' className='lg:bg-yellow-300 lg:text-2xl lg:text-blue-900 lg:font-bold lg:px-6 lg:py-3  lg:transition lg:duration-500 lg:ease-in-out lg:transform lg:hover:-translate-y-1 lg:hover:scale-110 bg-yellow-400 text-blue-900 font-bold px-2 py-2'>Register</Link>
                 </div>
                 <div className="lg:grid lg:grid-cols-3 lg:mt-3 grid grid-cols-3">
                 {allCategories.map((obj, index) => (

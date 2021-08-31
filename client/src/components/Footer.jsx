@@ -6,7 +6,7 @@ export default function Footer() {
         <div className='py-6 bg-blue-900 flex justify-evenly'>
             <FaGithub size={30} color='white' /> 
             <FaLinkedin size={30} color='white' />
-            <h3 className='text-white font-serif '>Ⓒ Babak Bayati 2021</h3>
+            <h3 className='text-white font-serif mt-2 '>Ⓒ Babak Bayati 2021</h3>
             
         </div>
     )
