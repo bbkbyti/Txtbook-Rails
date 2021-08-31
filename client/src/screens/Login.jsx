@@ -17,17 +17,17 @@ export default function Login(props) {
     };
 
     return (
-        <div className='min-h-screen font-serif flex justify-center'>
-            <div className='mt-16 rounded-2xl pt-10 px-20 mb-40 bg-gray-300 shadow-2xl'>
+        <div className='lg:min-h-screen lg:font-serif lg:flex lg:justify-center lg:bg-blue-100'>
+            <div className='lg:mt-16 lg:rounded-2xl lg:pt-10 lg:px-20 lg:mb-40 lg:bg-white lg:shadow-2xl'>
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();
                         handleLogin(formData);
                     }}
                 >
-                    <h3 className='text-4xl text-gray-700 font-bold p-8 mb-4'>
+                    <h3 className='lg:text-4xl lg:text-gray-700 font-bold p-8 mb-4'>
                         Login</h3>
-                        <div  className='flex flex-col'>
+                        <div  className='lg:flex lg:flex-col'>
                             <p>Username</p>
                     <label>
                         <input
@@ -48,8 +48,8 @@ export default function Login(props) {
                             onChange={handleChange}
                         />
                     </label>
-                    <button className='bg-green-400 text-white text-xl font-bold mt-8 py-2 rounded-xl hover:bg-green-500'>Login</button>
-                    <Link className='bg-yellow-300 font-bold mt-4 py-2 rounded-xl hover:bg-yellow-400' to='/register'>Register ?</Link>
+                    <button className='lg:bg-green-400 lg:text-white lg:text-xl lg:font-bold lg:mt-8 lg:py-2 lg:rounded-xl lg:hover:bg-green-500'>Login</button>
+                    <Link className='lg:bg-yellow-300 lg:font-bold lg:mt-4 lg:py-2 lg:rounded-xl lg:hover:bg-yellow-400' to='/register'>Register ?</Link>
                     </div>
                 </form>
             </div>
