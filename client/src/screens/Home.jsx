@@ -5,7 +5,7 @@ import { getAllCategories } from "../services/categories";
 
 export default function Home(props) {
     const [categories, setCategories] = useState([]);
-    const {allCategories} = props
+    const { allCategories } = props
 
     useEffect(() => {
 
@@ -37,13 +37,14 @@ export default function Home(props) {
                     <Link to='/register' className='lg:bg-yellow-300 lg:text-2xl lg:text-blue-900 lg:font-bold lg:px-6 lg:py-3  lg:transition lg:duration-500 lg:ease-in-out lg:transform lg:hover:-translate-y-1 lg:hover:scale-110 bg-yellow-400 text-blue-900 font-bold px-2 py-2'>Register</Link>
                 </div>
                 <div className="lg:grid lg:grid-cols-3 lg:mt-3 grid grid-cols-3">
-                {allCategories.map((obj, index) => (
-                <Link to={`/categories/${obj.id}`} >
-                    <div className="lg:bg-gray-200 lg:font-bold lg:text-xl lg:text-blue-900 lg:text-left lg:mt-2 lg:py-2 lg:px-4 lg:capitalize bg-gray-200 text-blue-900" key={index}>
-                        {obj.name}
-                    </div>
-                    </Link>
-                ))}
+                    {allCategories.map((obj, index) => (
+                        <Link to={`/categories/${obj.id}`} >
+                            <div className="lg:bg-gray-200 lg:font-bold lg:text-xl lg:text-blue-900 lg:text-left lg:mt-2 lg:py-2 lg:px-4 lg:capitalize bg-gray-200 text-blue-900"
+                                key={index}>
+                                {obj.name}
+                            </div>
+                        </Link>
+                    ))}
                 </div>
             </div>
         </div>
