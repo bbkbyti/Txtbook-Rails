@@ -37,7 +37,7 @@ const BooksDetail = (props) => {
                 />
             </div>
 
-            <div className=" lg:flex lg:flex-col lg:justify-center lg:pr-40 lg:text-2xl lg:font-bold  flex flex-col px-7">
+            <div className=" lg:flex lg:flex-col lg:justify-center lg:pr-40 lg:text-2xl lg:font-bold  flex flex-col px-7 lg:text-blue-900 text-blue-900 italic capitalize">
 
                 <div className="lg:bg-blue-100 lg:font-extrabold lg:mb-1 bg-gray-200 my-1 rounded-xl py-2 font-extrabold">Title: {textbook.title}</div>
 

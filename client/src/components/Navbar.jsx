@@ -10,25 +10,30 @@ export default function Navbar(props) {
             <header className="text-white">
 
                 {currentUser ? (
-                    <div className="lg:py-8 lg:bg-blue-900 lg:flex lg:justify-evenly lg:font-serif lg:text-xl bg-blue-900 flex justify-evenly">
+                    <div className=" lg:py-8 lg:bg-blue-900 lg:flex lg:justify-evenly lg:font-serif lg:text-xl bg-blue-900 flex justify-evenly">
                         <GoBook size={40} />
                         <Link className='lg:text-4xl lg:italic' to='/'>Textbook Rails</Link>
                         <Link className="" to='/textbooks'>Textbooks</Link>
                         <Link className="" to='/add/textbooks'>Add Textbook</Link>
                         <button className='lg:pb-3' onClick={handleLogout}>LogOut</button>
                         <h3 className='lg:text-2xl lg:italic'>Hi {currentUser.username} !</h3>
-                        <div className="px-4 cursor-pointer md:hidden " onClick={toggle}>
-                            <GiHamburgerMenu />
+                        <div className="px-4 my-2 cursor-pointer md:hidden " onClick={toggle}>
+                            <GiHamburgerMenu size={30} />
                         </div>
+                       
 
                     </div>
                 ) : (
-                    <div className="lg:py-8 lg:bg-blue-900 lg:flex lg:justify-evenly lg:font-serif lg:text-xl">
-                        <Link to='/'> <GoBook size={40} /></Link>
+                    
+                    <div className="lg:py-8 lg:bg-blue-900 lg:flex lg:justify-evenly lg:font-serif lg:text-xl bg-blue-900 flex justify-evenly">
+                        <Link to='/'> <GoBook className='my-2' size={40} /></Link>
                         <Link className='lg:text-4xl lg:italic' to='/'>Textbook Rails</Link>
                         <Link to='/textbooks'>Textbooks</Link>
                         <Link to='/login'>Login</Link>
                         <Link to='/register'>Register</Link>
+                        <div className="px-4 my-2 cursor-pointer md:hidden " onClick={toggle}>
+                            <GiHamburgerMenu size={30} />
+                        </div>
                     </div>
                 )}
             </header>

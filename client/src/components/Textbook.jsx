@@ -9,8 +9,8 @@ const Textbook = (props) => {
                 src={props.img_url} alt={props.title} />
             </Link>
         </div>
-        <div className=' mx-20 mb-9 mt-3 bg-blue-200 rounded-full shadow-2xl'>
-        <p className='text-xl font-bold italic font-serif text-blue-900 mx-6 py-6'>
+        <div className=' lg:mx-20 lg:mb-9 lg:mt-3 lg:bg-blue-200 lg:rounded-full lg:shadow-2xl bg-blue-200 rounded-full my-2'>
+        <p className='lg:text-xl lg:font-bold lg:italic lg:font-serif lg:text-blue-900 lg:mx-6 lg:py-6 font-bold px-4 py-3'>
             {props.title}</p>
         </div>
         
