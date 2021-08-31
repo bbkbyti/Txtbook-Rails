@@ -5,7 +5,7 @@ const Textbook = (props) => {
         <div className='flex flex-col justify-center items-center my-6' >
         <div className='flex flex-col justify-center'>
             <Link to={`/textbooks/${props.id}`}>
-                <img className=' shadow-2xl rounded-3xl w-40 h-full object-cover transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 ' 
+                <img className='shadow-2xl rounded-3xl w-40 h-full object-cover transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 ' 
                 src={props.img_url} alt={props.title} />
             </Link>
         </div>

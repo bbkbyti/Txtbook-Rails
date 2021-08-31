@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { getAllCategories } from "../services/categories";
-import Textbook from "../components/Textbook"
 
-export default function Home() {
+
+export default function Home(props) {
     const [categories, setCategories] = useState([]);
-    const [textbook, setTextbooks] = useState([])
+    const {allCategories} = props
+
     useEffect(() => {
 
         const fetchDropDowns = async () => {
@@ -35,7 +36,15 @@ export default function Home() {
                     <Link to='/login' className='bg-blue-900 text-2xl text-gray-200 font-bold px-9 py-3 mx-4  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>LogIn</Link>
                     <Link to='/register' className='bg-gray-300 text-2xl text-blue-900 font-bold px-6 py-3  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>Register</Link>
                 </div>
-
+                <div className="grid grid-cols-3">
+                {allCategories.map((obj, index) => (
+                <Link to={`/categories/${obj.id}`} >
+                    <div className="bg-blue-400 text-xl text-white text-left mt-1" key={index}>
+                        {obj.name}
+                    </div>
+                    </Link>
+                ))}
+                </div>
             </div>
         </div>
     )

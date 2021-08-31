@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Switch, Route, useHistory } from 'react-router-dom';
+import { Switch, Route, useHistory,Redirect } from 'react-router-dom';
 import './App.css';
 // import MainContainer from './containers/MainContainer';
 import Layout from './layouts/Layout';
@@ -13,6 +13,7 @@ import TextbookCreate from './screens/TextbookCreate';
 import TextbookEdit from './screens/TextbookEdit';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import Home from './screens/Home';
+import { getAllCategories } from './services/categories';
 
 
 
@@ -48,6 +49,15 @@ function App() {
     history.push('/')
   }
 
+  const [allCategories, setAllCategories] = useState([])
+  useEffect(() =>{
+    fetchCategories()
+  })
+  const fetchCategories = async () => {
+    const categories = await getAllCategories()
+    setAllCategories(categories)
+  }
+
   return (
     <div className="App">
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
@@ -61,23 +71,21 @@ function App() {
           <Route exact path="/textbooks/:id">
           <TextbookDetail currentUser={currentUser} />
         </Route>
-          <Route exact path="/categories-textbooks">
-         <CategoriesTextbooks />
+          <Route exact path="/categories/:id">
+         <CategoriesTextbooks allCategories={allCategories} />
         </Route>
-        <Route exact path='/categories'>
-        <Categories />
-        </Route>
+       
         <Route exact path="/textbooks/:id/edit">
-          <TextbookEdit />
+        {currentUser ? <TextbookEdit currentUser={currentUser} /> : <Redirect to="/login" />}
         </Route>
         <Route exact path="/add/textbooks">
-          <TextbookCreate />
+        {currentUser ? <TextbookCreate currentUser={currentUser} /> : <Redirect to="/login" />}
         </Route>
         <Route exact path="/textbooks">
-          <TextbooksList />
+          <TextbooksList currentUser={currentUser} />
         </Route>
           <Route exact path="/">
-          <Home/>
+          <Home  currentUser={currentUser} allCategories={allCategories} />
         </Route>
         </Switch>
       </Layout>
