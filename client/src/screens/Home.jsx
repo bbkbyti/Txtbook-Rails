@@ -19,27 +19,27 @@ export default function Home(props) {
     }, []);
 
     return (
-        <div className='grid grid-cols-2  min-h-screen bg-gray-100 font-serif'>
+        <div className='lg:grid lg:grid-cols-2 lg:min-h-screen lg:bg-gray-100 lg:font-serif flex flex-col font-serif min-h-screen'>
             <div>
                 <div>
-                    <h2 className='px-8 py-10 text-blue-800 font-bold italic text-4xl leading-relaxed'>
+                    <h2 className='lg:px-8 lg:py-10 lg:text-blue-800 lg:font-bold lg:italic lg:text-4xl lg:leading-relaxed text-blue-800 text-xl font-bold italic px-3 pt-3 '>
                         Welcome to Textbook Rails<br />Buy and Sell College Textbooks Online </h2>
                 </div>
-                <img className='w-9/12' src='https://www.pngkit.com/png/detail/126-1268278_faqs-for-students-college-student-students-icon.png' alt='students' />
+                <img className='lg:w-9/11' src='https://www.pngkit.com/png/detail/126-1268278_faqs-for-students-college-student-students-icon.png' alt='students' />
             </div>
             <div>
-                <div className='flex flex-col justify-evenly mb-4 mt-3'>
-                    <Link to='/textbooks' className='text-4xl text-gray-300 font-bold bg-blue-900 py-4 mx-32 mb-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 ' >Buy Textbooks</Link>
-                    <Link to='/add/textbooks' className='text-4xl text-blue-900 font-bold bg-gray-300 py-4 mx-32 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 '>Sell Textbooks</Link>
+                <div className='lg:flex lg:flex-col lg:justify-evenly lg:mb-4 lg:mt-3 flex justify-evenly py-2'>
+                    <Link to='/textbooks' className='lg:text-4xl lg:text-gray-300 lg:font-bold lg:bg-blue-900 lg:py-4 lg:mx-32 lg:mb-4 lg:transition lg:duration-500 lg:ease-in-out lg:transform lg:hover:-translate-y-1 lg:hover:scale-110 bg-blue-900 text-gray-300 font-bold px-3 py-2' >Buy Textbooks</Link>
+                    <Link to='/add/textbooks' className='lg:text-4xl lg:text-blue-900 lg:font-bold lg:bg-gray-300 lg:py-4 lg:mx-32 lg:transition lg:duration-500 lg:ease-in-out lg:transform lg:hover:-translate-y-1 lg:hover:scale-110 bg-gray-300 text-blue-900 font-bold px-3 py-2'>Sell Textbooks</Link>
                 </div>
-                <div className='flex justify-center'>
-                    <Link to='/login' className='bg-blue-900 text-2xl text-gray-200 font-bold px-9 py-3 mx-4  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>LogIn</Link>
-                    <Link to='/register' className='bg-gray-300 text-2xl text-blue-900 font-bold px-6 py-3  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>Register</Link>
+                <div className='lg:flex lg:justify-center flex justify-center py-5'>
+                    <Link to='/login' className='lg:bg-green-400 lg:text-2xl lg:text-white lg:font-bold lg:px-9 lg:py-3 lg:mx-4  lg:transition lg:duration-500 lg:ease-in-out lg:transform lg:hover:-translate-y-1 lg:hover:scale-110 bg-green-500 px-3 mx-2'>LogIn</Link>
+                    <Link to='/register' className='lg:bg-yellow-300 lg:text-2xl lg:text-blue-900 lg:font-bold lg:px-6 lg:py-3  lg:transition lg:duration-500 lg:ease-in-out lg:transform lg:hover:-translate-y-1 lg:hover:scale-110 bg-yellow-400 px-2'>Register</Link>
                 </div>
-                <div className="grid grid-cols-3">
+                <div className="lg:grid lg:grid-cols-3 lg:mt-3 grid grid-cols-3">
                 {allCategories.map((obj, index) => (
                 <Link to={`/categories/${obj.id}`} >
-                    <div className="bg-blue-400 text-xl text-white text-left mt-1" key={index}>
+                    <div className="lg:bg-gray-200 lg:font-bold lg:text-xl lg:text-blue-900 lg:text-left lg:mt-2 lg:py-2 lg:px-4 lg:capitalize bg-gray-200 text-blue-900" key={index}>
                         {obj.name}
                     </div>
                     </Link>
