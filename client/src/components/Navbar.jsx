@@ -11,7 +11,7 @@ export default function Navbar(props) {
 
                 {currentUser ? (
                     <div className=" lg:py-8 lg:bg-blue-900 lg:flex lg:justify-evenly lg:font-serif lg:text-xl bg-blue-900 flex justify-evenly">
-                        <GoBook size={40} />
+                        <Link to='/'> <GoBook className='' size={40} /></Link>
                         <Link className='lg:text-4xl lg:italic' to='/'>Textbook Rails</Link>
                         <Link className="" to='/textbooks'>Textbooks</Link>
                         <Link className="" to='/add/textbooks'>Add Textbook</Link>

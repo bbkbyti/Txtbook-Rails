@@ -12,7 +12,7 @@ export default function CategoriesTextbooks(props) {
       const oneCategory = allCategories.find(category => category.id === Number(id))
       setCategory(oneCategory)
     }
-  }, [])
+  }, [id])
 
   return (
     <div className="lg:min-h-screen lg:font-bold lg:font-serif min-h-screen font-bold font-serif">

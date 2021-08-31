@@ -56,9 +56,9 @@ const BooksDetail = (props) => {
 
             <div className="lg:flex lg:flex-col lg:justify-center flex justify-evenly">
                 <Link to={`/textbooks/${textbook.id}/edit`}>
-                    <button className=" lg:font-bold lg:px-16 lg:p-6 lg:bg-green-400 lg:hover:bg-green-600 lg:text-3xl lg:text-white  bg-green-400 hover:bg-green-600 my-2 py-2 px-6 text-white font-bold rounded-lg">Edit</button>
+                    <button className=" lg:font-bold lg:px-64 lg:p-6 lg:bg-green-400 lg:hover:bg-green-600 lg:text-3xl lg:text-white  bg-green-400 hover:bg-green-600 my-2 py-2 px-6 text-white font-bold rounded-lg">Edit</button>
                 </Link>
-                {currentUser ? <button onClick={handleDelete} className=" lg:font-bold lg:m-2 lg:mx-36 lg:p-6  lg:bg-red-400 lg:hover:bg-red-600 lg:text-3xl lg:text-white bg-red-400 hover:bg-red-600 my-2 py-2 px-3 text-white font-bold rounded-lg ">
+                {currentUser ? <button onClick={handleDelete} className=" lg:font-bold lg:m-2 lg:px-44 lg:p-6   lg:bg-red-400 lg:hover:bg-red-600 lg:text-3xl lg:text-white bg-red-400 hover:bg-red-600 my-2 py-2 px-3 text-white font-bold rounded-lg ">
                     Delete
                 </button> : <Link to="/login"> Delete </Link>}
             </div>

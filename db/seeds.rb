@@ -45,6 +45,8 @@ puts "#{User.count} users created"
 @category27 = Category.create!(name: 'sociology')
 @category28 = Category.create!(name: 'veterinary')
 @category29 = Category.create!(name: 'radio-television-film')
+@category30 = Category.create!(name: 'management')
+@category31 = Category.create!(name: 'theology')
 
 puts "#{Category.count} categories created"
 
@@ -151,14 +153,26 @@ puts "#{Category.count} categories created"
     edition: '15',
     ISBN: '0134484142',
     img_url: 'https://images-na.ssl-images-amazon.com/images/I/41OzpSQiuCL._SX411_BO1,204,203,200_.jpg',
+    other: 'https://www.amazon.com/Electrical-Engineering-Principles-Applications-7th/dp/0134484142/ref=sr_1_1?dchild=1&keywords=0134484142&qid=1630443508&s=books&sr=1-1',
     price: '105', user: @admin, category: @category26
 )
 @textbook14 = Textbook.create!(
     title: 'Introduction to Psychology: Gateways to Mind and Behavior',
     author: 'Allan Hambley',
     edition: '7',
-    ISBN: '0134484142',
+    ISBN: '1337565695',
     img_url: 'https://images-na.ssl-images-amazon.com/images/I/4150k4ZR3kL._SX378_BO1,204,203,200_.jpg',
-    price: '265', user: @admin, category: @category17
+    other: 'https://www.amazon.com/Introduction-Psychology-Gateways-Mind-Behavior/dp/1337565695/ref=sr_1_2?dchild=1&keywords=Introduction+to+Psychology%3A+Gateways+to+Mind+and+Behavior&qid=1630443665&s=books&sr=1-2',
+    price: '85', user: @admin, category: @category17
+)
+
+@textbook15 = Textbook.create!(
+    title: 'Elementary Turkish (Dover Language Guides)',
+    author: 'Lewis V. Thomas',
+    edition: 'Revised ed. Edition',
+    ISBN: '0486250644',
+    img_url: 'https://images-na.ssl-images-amazon.com/images/I/51vuuZuam1L._SX310_BO1,204,203,200_.jpg',
+    other: 'https://www.amazon.com/Elementary-Turkish-Dover-Language-Guides/dp/0486250644',
+    price: '8.95', user: @admin, category: @category5
 )
 puts "#{Textbook.count} texbooks created"

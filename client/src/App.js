@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory,Redirect } from 'react-router-dom';
 import './App.css';
-// import MainContainer from './containers/MainContainer';
 import Layout from './layouts/Layout';
 import Login from './screens/Login';
 import Register from './screens/Register';
-import Categories from './screens/Categories';
 import CategoriesTextbooks from './screens/CategoriesTextbooks';
 import TextbooksList from './screens/TextbooksList'
 import TextbookDetail from './screens/TextbookDetail'
