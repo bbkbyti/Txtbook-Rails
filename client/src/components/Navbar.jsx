@@ -20,15 +20,20 @@ export default function Navbar(props) {
                         <div className="px-4 cursor-pointer md:hidden " onClick={toggle}>
                             <GiHamburgerMenu />
                         </div>
+                       
 
                     </div>
                 ) : (
-                    <div className="lg:py-8 lg:bg-blue-900 lg:flex lg:justify-evenly lg:font-serif lg:text-xl">
-                        <Link to='/'> <GoBook size={40} /></Link>
+                    
+                    <div className="lg:py-8 lg:bg-blue-900 lg:flex lg:justify-evenly lg:font-serif lg:text-xl bg-blue-900 flex justify-evenly">
+                        <Link to='/'> <GoBook className='my-2' size={40} /></Link>
                         <Link className='lg:text-4xl lg:italic' to='/'>Textbook Rails</Link>
                         <Link to='/textbooks'>Textbooks</Link>
                         <Link to='/login'>Login</Link>
                         <Link to='/register'>Register</Link>
+                        <div className="px-4 my-2 cursor-pointer md:hidden " onClick={toggle}>
+                            <GiHamburgerMenu size={30} />
+                        </div>
                     </div>
                 )}
             </header>
