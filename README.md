@@ -34,7 +34,7 @@
 - _Users to be able to search and buy the textbook they need._
 - _Users to be able to resgister and login into website to purchase and sell textbooks._
 - _Users to be able to uplpad their textbook and sell it._
-- _Users be able to edit and delete their own textbooks only (not all the textbooks).
+- _Users be able to edit and delete their own textbooks only (not all the textbooks)._
 - _Styling with Tailwind._
 <br>
 
