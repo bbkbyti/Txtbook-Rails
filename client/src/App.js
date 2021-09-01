@@ -48,13 +48,14 @@ function App() {
   }
 
   const [allCategories, setAllCategories] = useState([])
-  useEffect(() =>{
-    fetchCategories()
-  })
-  const fetchCategories = async () => {
-    const categories = await getAllCategories()
-    setAllCategories(categories)
-  }
+  
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const allCategories = await getAllCategories()
+      setAllCategories(allCategories)
+    };
+    fetchCategories(allCategories);
+}, []);
 
   return (
     <div className="App">

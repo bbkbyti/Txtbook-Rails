@@ -1,42 +1,74 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { GoBook } from "react-icons/go";
-import { GiHamburgerMenu } from "react-icons/gi"
+import { FiMenu } from 'react-icons/fi';
+import './Navbar.css';
+
 
 export default function Navbar(props) {
     const { currentUser, handleLogout, toggle } = props;
     return (
-        <div>
-            <header className="text-white">
+        <div className="navbar-container font-serif lg:font-bold lg:text-2xl">
+            <div className="navbar">
+                <ul className="navbar-nav">
 
-                {currentUser ? (
-                    <div className=" lg:py-8 lg:bg-blue-900 lg:flex lg:justify-evenly lg:font-serif lg:text-xl bg-blue-900 flex justify-evenly">
-                        <Link to='/'> <GoBook className='' size={40} /></Link>
-                        <Link className='lg:text-4xl lg:italic' to='/'>Textbook Rails</Link>
-                        <Link className="" to='/textbooks'>Textbooks</Link>
-                        <Link className="" to='/add/textbooks'>Add Textbook</Link>
-                        <button className='lg:pb-3' onClick={handleLogout}>LogOut</button>
-                        <h3 className='lg:text-2xl lg:italic'>Hi {currentUser.username} !</h3>
-                        <div className="px-4 my-2 cursor-pointer md:hidden " onClick={toggle}>
-                            <GiHamburgerMenu size={30} />
-                        </div>
-                       
+                    <FiMenu onClick={toggle} className="navbar-dropdown" />
 
-                    </div>
-                ) : (
-                    
-                    <div className="lg:py-8 lg:bg-blue-900 lg:flex lg:justify-evenly lg:font-serif lg:text-xl bg-blue-900 flex justify-evenly">
-                        <Link to='/'> <GoBook className='my-2' size={40} /></Link>
-                        <Link className='lg:text-4xl lg:italic' to='/'>Textbook Rails</Link>
-                        <Link to='/textbooks'>Textbooks</Link>
-                        <Link to='/login'>Login</Link>
-                        <Link to='/register'>Register</Link>
-                        <div className="px-4 my-2 cursor-pointer md:hidden " onClick={toggle}>
-                            <GiHamburgerMenu size={30} />
-                        </div>
-                    </div>
-                )}
-            </header>
+                    <Link to="/textbooks" className="nav-link">
+                        Textbooks
+                    </Link>
+
+
+                    {currentUser ? (
+                        <Link to="/add/textbooks" className="nav-link">
+                            Add Textbook
+                        </Link>
+                    )
+                        :
+                        (
+                            <Link to="/login" className="nav-link">
+                                Add Textbook
+                            </Link>
+                        )}
+
+                </ul>
+
+                <div className="brand-container">
+                    <Link className="lg:brand lg:m-2 lg:text-3xl lg:font-bold" to="/">
+                        <p className=' lg:mx-5'>
+                            Textbook Rails
+                        </p>
+                    </Link>
+                    <GoBook size="40" />
+                </div>
+
+                <ul className="navbar-auth">
+
+                    {currentUser ?
+                        (
+                            <div className='lg:flex '>
+                                <p className='lg:mx-24 lg:px-3 lg:py-1 lg:rounded-full lg:text-blue-900 lg:bg-blue-200 font-serif italic mr-1 bg-blue-200 px-2 py-1 rounded-full text-sm'
+                                >Hi {currentUser.username}!</p>
+                                <button onClick={handleLogout} className="nav-link">
+                                    Log Out
+                                </button>
+                            </div>
+                        )
+                        :
+                        (
+
+                            <>
+                                <Link to="/register" className="nav-link">
+                                    Register
+                                </Link>
+                                <Link to="/login" className="nav-link">
+                                    Login
+                                </Link>
+                            </>
+                        )}
+
+                </ul>
+            </div>
         </div>
-    )
+    );
 }
