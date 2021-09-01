@@ -25,8 +25,8 @@ export default function Layout(props) {
 
     return (
         <div>
-            <DropDown isOpen={isOpen} toggle={toggle}/>
-            <Navbar toggle={toggle}  currentUser={currentUser} handleLogout={handleLogout} />
+            <DropDown isOpen={isOpen} toggle={toggle} currentUser={currentUser} handleLogout={handleLogout}/>
+            <Navbar  toggle={toggle}  currentUser={currentUser} handleLogout={handleLogout} />
             <div className="text-black">{props.children}</div>
             <div>
                 <Footer />

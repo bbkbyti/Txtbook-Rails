@@ -44,7 +44,7 @@ puts "#{User.count} users created"
 @category26 = Category.create!(name: 'psychology')
 @category27 = Category.create!(name: 'sociology')
 @category28 = Category.create!(name: 'veterinary')
-@category29 = Category.create!(name: 'radio-television-film')
+@category29 = Category.create!(name: 'radio-TV-film')
 @category30 = Category.create!(name: 'management')
 @category31 = Category.create!(name: 'theology')
 
