@@ -165,7 +165,8 @@ src
       const oneCategory = allCategories.find(category => category.id === Number(id))
       setCategory(oneCategory)
     }
-  }, [id]) ```
+  }, [id])
+   ```
 
 ## Code Issues & Resolutions
 
