@@ -160,7 +160,12 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+``` useEffect(() => {
+    if (allCategories.length) {
+      const oneCategory = allCategories.find(category => category.id === Number(id))
+      setCategory(oneCategory)
+    }
+  }, [id]) ```
 
 ## Code Issues & Resolutions
 
