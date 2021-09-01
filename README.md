@@ -166,7 +166,7 @@ src
     }
   }, [id])
    ```
-   Using bothe tables to find the textbook of one particular category and fetch it on the page
+    Finding textbooks of one particular category and fetch them on the page
 
 ## Code Issues & Resolutions
 
