@@ -24,8 +24,7 @@
 <br>
 
 ## Overview
-
-*** https://confident-agnesi-4db176.netlify.app/
+### [Textbook Rails](https://confident-agnesi-4db176.netlify.app/)
 
 **Textbook Rails** is a website to buy and sell college textbooks.
 
