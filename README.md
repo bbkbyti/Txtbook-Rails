@@ -122,7 +122,7 @@ src
 | Delete Functionality  |    H     |     3 hrs      |      2 hrs     |     2 hrs     |
 | Media Query |    H     |     3 hrs      |      3 hrs     |     3 hrs    |
 | Styling with Tailwind |    H     |     4 hrs      |      5 hrs     |    5 hrs    |
-| TOTAL               |       H   |     63 hrs      |      67 hrs     |     68 hrs     |
+| TOTAL               |       H   |     63 hrs      |      67 hrs     |     67 hrs     |
 
 
 > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evalute possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
