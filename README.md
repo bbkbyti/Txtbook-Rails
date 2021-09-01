@@ -103,27 +103,26 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| pseudocode   |    H     |     2 hrs      |      hrs     |     hrs    |
-| backend |    H     |     3 hrs      |       hrs     |     TBD     |
-| Create CRUD Actions |    H     |     4 hrs      |       hrs     |     TBD     |
-| Create Seed Data |    H     |     2 hrs      |       hrs     |     TBD     |
-| Test|    H     |     1 hrs      |       hrs     |     TBD     |
-| Debugging  |    H     |     4 hrs      |       hrs     |     TBD     |
-| Create Client |    H     |     2 hrs      |       hrs     |     TBD     |
-| Create Directories in client |    H     |     2 hrs      |       hrs     |     TBD     |
-| Create Services files |    H     |     4 hrs      |       hrs     |     TBD     |
-| Create mainContainer.jsx |    H     |     4 hrs      |       hrs     |     TBD     |
-| Create Login.jsx|    H     |     3 hrs      |       hrs     |     TBD     |
-| Create Homepage.jsx |    H     |     4 hrs      |       hrs     |     TBD     |
-| Create Register.jsx |    H     |     3 hrs      |       hrs     |     TBD     |
-| Create Add.jsx|    H     |     4 hrs      |       hrs     |     TBD     |
-| Create Edit.jsx |    H     |     4 hrs      |       hrs     |     TBD     |
-| Create Navbar.jsx |    H     |     2 hrs      |       hrs     |     TBD     |
-| Create Footer.jsx |    H     |     2 hrs      |       hrs     |     TBD     |
-| Delete Functionality  |    H     |     3 hrs      |       hrs     |     TBD     |
-| Media Query |    H     |     3 hrs      |       hrs     |     TBD     |
-| Styling with Tailwind |    H     |     4 hrs      |       hrs     |     TBD     |
-| TOTAL               |       H   |     63 hrs      |      hrs     |     TBD     |
+| pseudocode   |    H     |     2 hrs      |     2 hrs     |    2 hrs    |
+| backend |    H     |     3 hrs      |      3 hrs     |     3 hrs    |
+| Create CRUD Actions |    H     |     4 hrs      |      6 hrs     |     6 hrs     |
+| Create Seed Data |    H     |     2 hrs      |       3 hrs     |     3 hrs     |
+| Test|    H     |     1 hrs      |       3 hrs     |     3 hrs     |
+| Debugging  |    H     |     4 hrs      |      8 hrs     |     8 hrs     |
+| Create Client |    H     |     2 hrs      |      2 hrs     |     2 hrs     |
+| Create Directories in client |    H     |     2 hrs      |      1 hrs     |     1 hrs     |
+| Create Services files |    H     |     4 hrs      |      2 hrs     |     2 hrs     |
+| Create Login.jsx|    H     |     3 hrs      |      3 hrs     |     3 hrs     |
+| Create Homepage.jsx |    H     |     4 hrs      |      5 hrs     |     5 hrs     |
+| Create Register.jsx |    H     |     3 hrs      |      3 hrs     |     3 hrs      |
+| Create Add.jsx|    H     |     4 hrs      |      4 hrs     |    4 hrs     |
+| Create Edit.jsx |    H     |     4 hrs      |      6 hrs     |     6 hrs     |
+| Create Navbar.jsx |    H     |     2 hrs      |      4 hrs     |     4 hrs     |
+| Create Footer.jsx |    H     |     2 hrs      |      2 hrs     |    2 hrs    |
+| Delete Functionality  |    H     |     3 hrs      |      2 hrs     |     2 hrs     |
+| Media Query |    H     |     3 hrs      |      3 hrs     |     3 hrs    |
+| Styling with Tailwind |    H     |     4 hrs      |      5 hrs     |    5 hrs    |
+| TOTAL               |       H   |     63 hrs      |      68 hrs     |     68 hrs     |
 
 
 > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evalute possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
@@ -167,6 +166,7 @@ src
     }
   }, [id])
    ```
+   Using bothe tables to find the textbook of one particular category and fetch it on the page
 
 ## Code Issues & Resolutions
 
